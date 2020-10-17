@@ -1,4 +1,4 @@
-#dotfiles
+# dotfiles
 So, this is my arch dotfiles!
 I use
 * bspwm and sxhkd
