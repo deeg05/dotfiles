@@ -1,0 +1,51 @@
+#! /bin/sh
+
+# Faster keyboard
+xset r rate 300 50
+
+# Swap caps with escape
+setxkbmap -option caps:swapescape
+
+# Key daemon
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Compositor
+compton &
+
+# Wallpaper
+feh --bg-fill $HOME/wallpaper.jpg
+
+# Colors from wallpaper
+wal -R
+
+# Monitors
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# bspwm borders and gaps
+bspc config border_width         0
+bspc config window_gap          10
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# bspwm rules
+bspc rule -a Gimp state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a MultiMC state=floating
+
+# Toggle between Russian and English layouts
+setxkbmap -option grp:alt_shift_toggle us,ru
+
+# xscreensaver, polybar and polkit
+xscreensaver -no-splash &
+polybar top &
+/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+
+# Locscreen
+#env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock
