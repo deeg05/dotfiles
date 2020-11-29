@@ -3,6 +3,9 @@
 # Kill previous hotkey daemon instances
 pkill sxhkd
 
+# Change "X" cursor to normal one
+xsetroot -cursor_name left_ptr
+
 # Faster keyboard
 xset r rate 300 50
 
