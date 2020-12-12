@@ -7,5 +7,5 @@ I use
 * xscreensaver
 * mate-polkit
 * *[Ibhagwan's picom fork](https://github.com/ibhagwan/picom)*
-* polybar and (https://github.com/bacara/powerline-for-polybar "powerline-for-polybar") (included in repo with a little change)
+* polybar and ["powerline-for-polybar"](https://github.com/bacara/powerline-for-polybar) (included in repo with a little change)
 * *[Deeg05's dmenu fork](https://github.com/deeg05/dmenu)*
