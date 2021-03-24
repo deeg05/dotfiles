@@ -1,6 +1,5 @@
 # dotfiles
-So, this is my arch dotfiles!
-I use
+Programs:
 * bspwm and sxhkd
 * Termite as terminal emulator
 * pywal
